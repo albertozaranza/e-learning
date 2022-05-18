@@ -2,7 +2,7 @@ import SearchIcon from '../../assets/icons/search';
 
 import type { ChangeEvent } from 'react';
 
-type SearchBarProps = {
+export type SearchBarProps = {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
