@@ -1,5 +1,14 @@
-function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}
+import Home from './screens/home';
 
-export default App;
+import Logo from './assets/icons/logo';
+
+export default function App() {
+  return (
+    <div className="flex flex-1 flex-col h-screen bg-purple">
+      <header className="p-6">
+        <Logo />
+      </header>
+      <Home />
+    </div>
+  );
+}
