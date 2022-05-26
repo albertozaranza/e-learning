@@ -17,7 +17,9 @@ export default function SchoolSubjectCard({
       <h1 className="mb-1 font-secondary text-base text-base-darker">
         {title}
       </h1>
-      <p className="text-input text-xs">{amount} aulas</p>
+      <p className="text-input text-xs">
+        {amount} {amount > 1 ? 'aulas' : 'aula'}
+      </p>
     </div>
   );
 }
