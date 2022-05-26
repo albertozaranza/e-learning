@@ -1,6 +1,7 @@
 import useHome from './home.hook';
 
 import SearchBar from '../../components/search-bar';
+import SchoolSubjectCard from '../../components/school-subject-card';
 
 export default function Home() {
   const { filteredItems, searchedValue, handleField } = useHome();
@@ -15,16 +16,8 @@ export default function Home() {
         </p>
       </div>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 md:grid-cols-6 md:gap-6 ">
-        {filteredItems.map(({ Icon, title, amount }) => (
-          <div key={title} className="bg-white p-6 rounded-2xl">
-            <div className="mb-6">
-              <Icon />
-            </div>
-            <h1 className="mb-1 font-secondary text-base text-base-darker">
-              {title}
-            </h1>
-            <p className="text-input text-xs">{amount} aulas</p>
-          </div>
+        {filteredItems.map(props => (
+          <SchoolSubjectCard key={props.title} {...props} />
         ))}
       </div>
     </div>
